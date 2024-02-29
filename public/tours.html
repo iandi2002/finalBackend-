@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="weather.js"></script>
+    <script src="tours.js"></script>
+    
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/s.css">
+</head>
+<body>
+    
+    <nav>
+        <a href="/">Home</a>
+        <a href="/tours">Tours</a>
+        <a href="/about">About Us</a>
+        <a href="/contacts">Contact</a>
+    </nav>
+    <div class="container">
+        <h2>Book a Tour</h2>
+        <form id="tour-form" onsubmit="event.preventDefault(); addTour()">
+        <label for="countries">Select departure country:</label>
+        <select id="countries">
+            <option value="Kazakhstan" data-price="1000">Kazakhstan</option>
+            <option value="USA" data-price="1000">USA</option>
+            <option value="Italy" data-price="1000">Italy</option>
+        </select>
+        <label for="countrie">Select destination country:</label>
+        <select id="countrie">
+            <option value="USA" data-price="1000">USA</option>
+            <option value="Kazakhstan" data-price="1000">Kazakhstan</option>
+            <option value="Italy" data-price="1000">Italy</option>
+        </select>
+
+        <label for="from-city">Select departure city:</label>
+        <select id="from-city">
+            <option value="Astana" data-price="1000">Astana</option>
+            <option value="Chicago" data-price="1000">Chicago</option>
+            <option value="Rome" data-price="1000">Rome</option>
+        </select>
+        <div class="info-container">
+        <label for="citySelect">Select destination city:</label>
+        <select id="citySelect">
+            <option value="Chicago" data-price="1000">Chicago</option>
+            <option value="Astana" data-price="1000">Astana</option>
+            <option value="Rome" data-price="1000">Rome</option>
+        </select>
+        </div>
+        <div id="weather-info">
+            <p>Weather(to display the weather, select a city):</p>
+        </div>
+
+        <label for="hotel">Select hotel:</label>
+        <input type="text" id="hotel" placeholder="Enter hotel name">
+
+        <label for="arrival-date">Arrival date:</label>
+        <input type="date" id="arrival-date">
+
+        <label for="departure-date">Departure date:</label>
+        <input type="date" id="departure-date">
+
+        <label for="adults">Number of adults:</label>
+        <input type="number" id="adults" min="1" value="1">
+
+        <label for="children">Number of children:</label>
+        <input type="number" id="children" min="0" value="0">
+
+        <button type="submit" onclick="bookTour()">Book Now</button>
+        
+    </form>
+        <div id="booking-info"></div>
+    </div>
+    <div id="edit-form"></div>
+    <div class="container">
+        <h2>Search Tours</h2>
+        <input type="text" id="search-query" placeholder="Enter search query">
+        <button onclick="searchTour()">Search</button>
+        <div id="search-results"></div>
+      </div>
+    
+
+    
+
+</body>
+</html>

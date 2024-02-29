@@ -1,0 +1,47 @@
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            border: 2px solid white; /* Добавляем белую обводку */
+            padding: 20px; /* Увеличиваем внутренний отступ для красоты */
+            border-radius: 10px; /* Для скругления углов */
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 5px;
+        }
+        a {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h2>Login</h2>
+    <form action="/login" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+    </form>
+    <p>Don't have an account? <a href="/">Register here</a>.</p>
+</body>
+</html>

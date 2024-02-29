@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Page</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin-top: 190;
+        }
+        .styled-table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+        .styled-table th, .styled-table td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+        }
+        .add-button {
+            margin-top: 20px; /* Расстояние между таблицей и кнопкой */
+            display: flex;
+            justify-content: center;
+        }
+        .add-button a {
+            text-decoration: none;
+        }
+        .add-button button {
+            background-color: black; /* Черный цвет кнопки */
+            color: white; /* Белый цвет текста */
+            border: 1px solid white; /* Белая граница */
+            padding: 10px 20px; /* Внутренние отступы */
+        }
+    </style>
+</head>
+<body>
+    <table class="styled-table">
+        <tr>
+            <th>Text of the appeal</th>
+        </tr>
+        <!-- Data from the database will be inserted here -->
+    </table>
+    <div class="add-button">
+        <a href="/add"><button>Add</button></a>
+    </div>
+</body>
+</html>
