@@ -11,7 +11,7 @@ const app = express();
 const port = 3000;
 
 // Подключение к MongoDB
-mongoose.connect("mongodb://localhost:27017/final");
+mongoose.connect("mongodb+srv://mychiroky:j3dZAQ4yZITi2SwB@backend.gvsci0w.mongodb.net/?retryWrites=true&w=majority&appName=backend");
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
